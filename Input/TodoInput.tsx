@@ -16,7 +16,7 @@ const TodoInput = (props:TodoInputProps) => {
 
   const handleSubmit = (e:FormEvent) => {
     e.preventDefault(); // 새로고침 방지
-    props.onSubmit(); 
+    props.onSubmit();
   }
 
   return (
