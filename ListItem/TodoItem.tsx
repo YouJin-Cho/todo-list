@@ -11,7 +11,6 @@ interface TodoItemProps {
 }
 
 const TodoItem = (props:TodoItemProps) => {
-  
   const handleToggleClick = () => {
     props.onToggleClick(props.id)
   }

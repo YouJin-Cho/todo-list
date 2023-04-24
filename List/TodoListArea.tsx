@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 
 interface TodoListArea {
-  children: ReactNode 
+  children: ReactNode
   todoCount: number
 }
 
