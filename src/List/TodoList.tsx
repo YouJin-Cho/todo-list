@@ -1,26 +1,20 @@
 import styles from "./TodoList.module.css";
 import TodoItem from '../ListItem/TodoItem';
-import { TodoType } from "../App";
+import { useTodoState } from "../Todo/TodoProvider";
 
-interface TodoListProps {
-  todos: TodoType[]
-  onToggleClick: (id:number) => void
-  onRemoveClick: (id:number) => void
-}
-
-const TodoList = (props:TodoListProps) => {
+const TodoList = () => {
+  const todoState = useTodoState()
+  // <li> 생성
   return (
     <section>
       <ol className={styles.olContainer}>
         {
-          props.todos.map((item) => {
+          todoState.todos.map((item) => {
             return <TodoItem 
             key={item.id} 
             id={item.id} 
             text={item.text} 
             isChecked={item.isChecked}
-            onRemoveClick={props.onRemoveClick}
-            onToggleClick={props.onToggleClick}
             />;
           })
         }

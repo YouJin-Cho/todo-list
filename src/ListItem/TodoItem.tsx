@@ -1,22 +1,34 @@
 import styles from './TodoItem.module.css';
 import { BsCheck2Circle } from 'react-icons/bs';
 import { IoIosRemoveCircleOutline } from 'react-icons/io';
+import { useTodoDispatch } from '../Todo/TodoProvider';
 
+// props를 받기 위해 typeScript 문법 작성
 interface TodoItemProps {
   id: number
   text: string
   isChecked: boolean
-  onRemoveClick: (id:number) => void
-  onToggleClick: (id:number) => void
 }
 
 const TodoItem = (props:TodoItemProps) => {
+  const todoDispatch = useTodoDispatch()
+  
   const handleToggleClick = () => {
-    props.onToggleClick(props.id)
+    todoDispatch({
+      type: 'checked',
+      payload: {
+        id: props.id
+      }
+    })
   }
 
   const handleRemoveClick = () => {
-    props.onRemoveClick(props.id)
+    todoDispatch({
+      type: 'remove',
+      payload: {
+        id: props.id
+      }
+    })
   }
 
   return (
