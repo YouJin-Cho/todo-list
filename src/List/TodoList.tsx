@@ -1,9 +1,9 @@
 import styles from "./TodoList.module.css";
 import TodoItem from '../ListItem/TodoItem';
-import { TodoType } from "../Todo/todoReducer";
+import { TodoType } from "../App";
 
 interface TodoListProps {
-  todos: TodoType[] 
+  todos: TodoType[]
   onToggleClick: (id:number) => void
   onRemoveClick: (id:number) => void
 }
