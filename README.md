@@ -40,3 +40,8 @@
 
 ▶️ '전체 완료' & '전체 삭제' 기능 <br>
 ![IMB_CHts15](https://github.com/YouJin-Cho/todo-list/assets/122290134/eadc103e-f9ab-47db-9f9f-157fa97366e7)
+<br><br>
+
+## 👀 회고록
+👉🏻 <a href="https://cyjcyj.tistory.com/142" target="_blank">블로그 회고록 보러가기</a>
+<br><br>
